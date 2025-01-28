@@ -1,0 +1,9 @@
+name = "SSMConstructor"
+uuid = "71ab735f-1e8e-4816-9bf8-248422f75511"
+authors = ["Charles Knipp <charles.a.knipp@frb.gov>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+MacroTools = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
+SSMProblems = "26aad666-b158-4e64-9d35-0e672562fa48"
