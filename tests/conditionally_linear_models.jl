@@ -8,8 +8,8 @@ ucsv_quote = quote
     x[t] = x[t-1] + ε[t]
 
     # noise
-    ε[t] ~ Normal(0, logσε[t])
-    η[t] ~ Normal(0, logση[t])
+    ε[t] ~ Normal(0, exp(logσε[t]))
+    η[t] ~ Normal(0, exp(logση[t]))
 
     # volatility process
     logσε[t] = logσε[t-1] + hε[t]
@@ -20,7 +20,7 @@ ucsv_quote = quote
     hη[t] ~ Normal(0, γ)
 end
 
-out = begin
+begin
     vars, body = varwalk(ucsv_quote)
     obs, states, varmap = capture_vars(body)
     clean_expr(construct_transition(body, states, varmap))
