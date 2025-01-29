@@ -31,3 +31,9 @@ begin
     obs, states, varmap = capture_vars(body)
     clean_expr(construct_observation(body, obs, states, varmap))
 end
+
+begin
+    vars, body = varwalk(ucsv_quote)
+    graph = SSMConstructor.graphical_model(vars, body)
+    SSMConstructor.print_digraph(graph, vars)
+end

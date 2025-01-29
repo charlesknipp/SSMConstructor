@@ -35,10 +35,10 @@ function lead(vi::VarInfo)
 end
 
 struct ModelInfo
-    varlist::Vector{VarInfo}
-    obslist::Vector{VarInfo}
-    index::Symbol
-    noise::Vector{VarInfo}
+    varmap::Dict{VarInfo,Set{VarInfo}}
+    obs::Set{VarInfo}
+    states::Set{VarInfo}
+    noise::Set{VarInfo}
 end
 
 # remove nothings

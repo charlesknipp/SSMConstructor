@@ -4,6 +4,9 @@ authors = ["Charles Knipp <charles.a.knipp@frb.gov>"]
 version = "0.1.0"
 
 [deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
 MacroTools = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 SSMProblems = "26aad666-b158-4e64-9d35-0e672562fa48"

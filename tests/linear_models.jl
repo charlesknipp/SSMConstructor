@@ -27,6 +27,12 @@ begin
     clean_expr(construct_observation(body, obs, states, varmap))
 end
 
+begin
+    vars, body = varwalk(uc0_quote)
+    graph = SSMConstructor.graphical_model(vars, body)
+    SSMConstructor.print_digraph(graph, vars)
+end
+
 ## LOCAL LEVEL TREND #######################################################################
 
 uc_quote = quote
@@ -49,4 +55,10 @@ begin
     vars, body = varwalk(uc_quote)
     obs, states, varmap = capture_vars(body)
     clean_expr(construct_observation(body, obs, states, varmap))
+end
+
+begin
+    vars, body = varwalk(uc_quote)
+    graph = SSMConstructor.graphical_model(vars, body)
+    SSMConstructor.print_digraph(graph, vars)
 end
